@@ -152,9 +152,10 @@
           <rect x="0" y="0" width="1400" height="1600" fill="url(#lightBeam)"/>
         </svg>
         <!-- Ekte foto brukes i stedet for illustrasjonen når det finnes.
-             data-climb angir hvilken vei trappen i bildet stiger ("left"
-             eller "right"), slik at kameraet klatrer riktig vei. -->
-        <img class="scene__photo" src="bilder/hero.jpg" alt="" data-climb="left" onerror="this.remove()">
+             data-focus-start/-end er posisjonen (x,y i % av bildet) til
+             hhv. nederste og øverste trappetrinn, slik at kameraet faktisk
+             følger trappen i bildet i stedet for å bare panorere hjørne-til-hjørne. -->
+        <img class="scene__photo" src="bilder/hero.jpg" alt="" data-focus-start="74,80" data-focus-end="34,12" onerror="this.remove()">
       </div>
 
       <!-- Jevn mørk toning over hele bildet, slik at hvit tekst alltid er lesbar -->

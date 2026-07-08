@@ -58,27 +58,41 @@
 
   var dims = { vw: 0, vh: 0, w: 0, h: 0, total: 1 };
 
-  // Illustrasjonen er 2400/1600 = 1.5 bred/høy og klatrer mot høyre.
-  // Lastes et ekte foto, brukes fotoets format og data-climb i stedet.
+  // Illustrasjonen er 2400/1600 = 1.5 bred/høy og klatrer fra nede-venstre
+  // til oppe-høyre (samme retning som er tegnet inn i SVG-en).
   var sceneRatio = 1.5;
-  var climbDir = "right";
+  // Fokuspunkt (som andel av bildet, 0–1) for nederste og øverste trinn.
+  // Lastes et ekte foto med data-focus-start/-end, brukes disse i stedet
+  // for å style kameraet til å faktisk følge trappen i det bildet.
+  var focus = { x0: 0.08, y0: 0.92, x1: 0.92, y1: 0.08 };
 
   function measure() {
     dims.vw = window.innerWidth;
     dims.vh = window.innerHeight;
     // Scenen må være større enn skjermen både i høyde og bredde,
     // ellers blir det ingen "reise".
-    dims.h = Math.max(dims.vh * 1.55, (dims.vw * 1.575) / sceneRatio);
+    dims.h = Math.max(dims.vh * 2, (dims.vw * 1.575) / sceneRatio);
     dims.w = dims.h * sceneRatio;
     scene.style.width = dims.w + "px";
     scene.style.height = dims.h + "px";
     dims.total = story.offsetHeight - dims.vh;
   }
 
+  function parseFocus(attr) {
+    var v = scenePhoto.getAttribute(attr);
+    if (!v) return null;
+    var parts = v.split(",").map(Number);
+    if (parts.length !== 2 || parts.some(isNaN)) return null;
+    return [parts[0] / 100, parts[1] / 100];
+  }
+
   function adoptPhoto() {
     if (scenePhoto && scenePhoto.naturalWidth > 0) {
       sceneRatio = scenePhoto.naturalWidth / scenePhoto.naturalHeight;
-      climbDir = scenePhoto.getAttribute("data-climb") === "left" ? "left" : "right";
+      var start = parseFocus("data-focus-start");
+      var end = parseFocus("data-focus-end");
+      if (start) { focus.x0 = start[0]; focus.y0 = start[1]; }
+      if (end) { focus.x1 = end[0]; focus.y1 = end[1]; }
       measure();
       update();
     }
@@ -101,10 +115,15 @@
         "translate(" + (dims.vw - dims.w) / 2 + "px," + (dims.vh - dims.h) / 2 + "px)";
     } else {
       var e = easeInOut(p);
-      // Klatrer mot høyre: start nede-venstre, slutt oppe-høyre.
-      // Klatrer mot venstre: start nede-høyre, slutt oppe-venstre.
-      var tx = climbDir === "right" ? (dims.vw - dims.w) * e : (dims.vw - dims.w) * (1 - e);
-      var ty = (dims.vh - dims.h) * (1 - e);
+      // Finn fokuspunktet akkurat nå (mellom bunn- og topptrinn), og
+      // sentrer scenen slik at det punktet havner midt i vinduet.
+      var fx = focus.x0 + (focus.x1 - focus.x0) * e;
+      var fy = focus.y0 + (focus.y1 - focus.y0) * e;
+      var tx = dims.vw / 2 - fx * dims.w;
+      var ty = dims.vh / 2 - fy * dims.h;
+      // Aldri vis tomrom utenfor scenen
+      tx = Math.min(0, Math.max(dims.vw - dims.w, tx));
+      ty = Math.min(0, Math.max(dims.vh - dims.h, ty));
       scene.style.transform = "translate3d(" + tx + "px," + ty + "px,0)";
     }
 
