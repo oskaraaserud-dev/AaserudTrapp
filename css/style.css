@@ -516,6 +516,7 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 .about__portrait.is-empty img { display: none; }
 .about__portrait-fallback { width: 38%; color: rgba(250, 247, 241, 0.3); }
