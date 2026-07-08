@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaserud Trapp – Levering og montering av kvalitetstrapper</title>
+  <meta name="description" content="Kai Aaserud leverer og monterer kvalitetstrapper i heltre over hele Østlandet – trapper fra Stryntrappa og Escalia, tilpasset ditt hjem.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 26h8v-6h6v-6h6V8h4' fill='none' stroke='%232b2620' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="bilder/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="topp">
+
+  <!-- ======== HEADER ======== -->
+  <header class="site-header" id="siteHeader">
+    <a class="logo" href="#topp" aria-label="Aaserud Trapp – til toppen">
+      <svg viewBox="0 0 32 32" class="logo__icon" aria-hidden="true">
+        <path d="M3 27h9v-7h7v-7h7V6h3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="logo__text">Aaserud&nbsp;Trapp</span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Hovedmeny">
+      <a href="#topp">Hjem</a>
+      <a href="#modeller">Trappemodeller</a>
+      <a href="#prosess">Slik foregår det</a>
+      <a href="#om">Om oss</a>
+      <a href="#kontakt" class="nav-cta">Kontakt oss</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Åpne meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ======== SCROLL-HISTORIE: KLATRE OPP TRAPPEN ======== -->
+  <section class="story" id="story" aria-label="Introduksjon">
+    <div class="story__sticky">
+
+      <!-- Illustrert scene som "kameraet" klatrer gjennom.
+           Vil du heller bruke et ekte foto senere: bytt ut SVG-en under
+           med et stort <img> inne i #scene – animasjonen fungerer likt. -->
+      <div class="scene" id="scene" aria-hidden="true">
+        <svg viewBox="0 0 2400 1600" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f4ede1"/>
+              <stop offset="1" stop-color="#eadfcc"/>
+            </linearGradient>
+            <linearGradient id="treadGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#dcb079"/>
+              <stop offset="1" stop-color="#bd935c"/>
+            </linearGradient>
+            <linearGradient id="wardrobeGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#dfc39a"/>
+              <stop offset="1" stop-color="#cfae7f"/>
+            </linearGradient>
+            <linearGradient id="lightBeam" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+              <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.12"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+            </linearGradient>
+            <pattern id="slats" width="48" height="100" patternUnits="userSpaceOnUse">
+              <rect width="48" height="100" fill="#d9c09a"/>
+              <rect x="38" width="10" height="100" fill="#c9ac80"/>
+              <rect x="0" width="3" height="100" fill="#e7d5b4"/>
+            </pattern>
+          </defs>
+
+          <!-- Vegger og gulv -->
+          <rect x="0" y="0" width="2400" height="1600" fill="url(#wallGrad)"/>
+          <rect x="700" y="0" width="1700" height="1440" fill="url(#slats)"/>
+          <rect x="0" y="1400" width="2400" height="200" fill="#e6dfd2"/>
+          <rect x="0" y="1394" width="2400" height="8" fill="#d4cab7"/>
+
+          <!-- Garderobeskap til venstre -->
+          <rect x="150" y="230" width="250" height="1170" rx="6" fill="url(#wardrobeGrad)"/>
+          <rect x="410" y="230" width="250" height="1170" rx="6" fill="url(#wardrobeGrad)"/>
+          <rect x="398" y="230" width="6" height="1170" fill="#b3946a"/>
+          <rect x="384" y="770" width="8" height="70" rx="4" fill="#8f7350"/>
+          <rect x="424" y="770" width="8" height="70" rx="4" fill="#8f7350"/>
+
+          <!-- Dørmatte -->
+          <rect x="720" y="1460" width="300" height="64" rx="10" fill="#cdbc99" opacity="0.8"/>
+
+          <!-- Skygge under trappen -->
+          <polygon points="300,1400 2100,1400 2100,540" fill="#000000" opacity="0.04"/>
+
+          <!-- Trappetrinn (12 stk, åpne trinn i eik) -->
+          <g>
+            <rect x="300"  y="1325" width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="450"  y="1250" width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="600"  y="1175" width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="750"  y="1100" width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="900"  y="1025" width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="1050" y="950"  width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="1200" y="875"  width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="1350" y="800"  width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="1500" y="725"  width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="1650" y="650"  width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="1800" y="575"  width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <rect x="1950" y="500"  width="168" height="30" rx="5" fill="url(#treadGrad)"/>
+            <!-- Repos i toppen -->
+            <rect x="2118" y="500" width="282" height="30" fill="url(#treadGrad)"/>
+            <rect x="2118" y="530" width="282" height="24" fill="#a8825333"/>
+          </g>
+
+          <!-- Skygger under trinnene -->
+          <g fill="#8a6b42" opacity="0.22">
+            <rect x="306" y="1355" width="156" height="10" rx="5"/>
+            <rect x="456" y="1280" width="156" height="10" rx="5"/>
+            <rect x="606" y="1205" width="156" height="10" rx="5"/>
+            <rect x="756" y="1130" width="156" height="10" rx="5"/>
+            <rect x="906" y="1055" width="156" height="10" rx="5"/>
+            <rect x="1056" y="980" width="156" height="10" rx="5"/>
+            <rect x="1206" y="905" width="156" height="10" rx="5"/>
+            <rect x="1356" y="830" width="156" height="10" rx="5"/>
+            <rect x="1506" y="755" width="156" height="10" rx="5"/>
+            <rect x="1656" y="680" width="156" height="10" rx="5"/>
+            <rect x="1806" y="605" width="156" height="10" rx="5"/>
+            <rect x="1956" y="530" width="156" height="10" rx="5"/>
+          </g>
+
+          <!-- Glassrekkverk med håndløper i tre -->
+          <polygon points="360,1345 2160,445 2160,285 360,1185" fill="#ffffff" opacity="0.16"/>
+          <polygon points="360,1345 2160,445 2160,285 360,1185" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.45"/>
+          <line x1="360" y1="1185" x2="2160" y2="285" stroke="#a97e4e" stroke-width="26" stroke-linecap="round"/>
+          <g fill="#9a9a96">
+            <circle cx="520" cy="1275" r="9"/>
+            <circle cx="880" cy="1095" r="9"/>
+            <circle cx="1240" cy="915" r="9"/>
+            <circle cx="1600" cy="735" r="9"/>
+            <circle cx="1960" cy="555" r="9"/>
+          </g>
+
+          <!-- Taklampe -->
+          <line x1="2150" y1="0" x2="2150" y2="170" stroke="#3a352d" stroke-width="4"/>
+          <path d="M2030 250 Q2030 165 2150 165 Q2270 165 2270 250 Q2270 320 2150 320 Q2030 320 2030 250 Z" fill="#fbf8f1"/>
+          <path d="M2030 250 Q2030 165 2150 165 Q2270 165 2270 250 Q2270 320 2150 320 Q2030 320 2030 250 Z" fill="#e3d9c4" opacity="0.35"/>
+          <ellipse cx="2150" cy="320" rx="52" ry="12" fill="#efe8d8"/>
+
+          <!-- Krakk og vase -->
+          <g>
+            <rect x="330" y="1288" width="210" height="24" rx="8" fill="#c69e6c"/>
+            <polygon points="352,1312 392,1312 372,1400 340,1400" fill="#b98f5c"/>
+            <polygon points="478,1312 518,1312 530,1400 498,1400" fill="#b98f5c"/>
+          </g>
+          <path d="M2300 1400 q-26 -12 -26 -52 q0 -46 34 -46 q34 0 34 46 q0 40 -26 52 Z" fill="#b0703f"/>
+
+          <!-- Lys fra vindu til venstre -->
+          <rect x="0" y="0" width="1400" height="1600" fill="url(#lightBeam)"/>
+        </svg>
+        <!-- Ekte foto brukes i stedet for illustrasjonen når det finnes.
+             data-climb angir hvilken vei trappen i bildet stiger ("left"
+             eller "right"), slik at kameraet klatrer riktig vei. -->
+        <img class="scene__photo" src="bilder/hero.jpg" alt="" data-climb="left" onerror="this.remove()">
+      </div>
+
+      <!-- Jevn mørk toning over hele bildet, slik at hvit tekst alltid er lesbar -->
+      <div class="story-overlay" aria-hidden="true"></div>
+
+      <!-- Tekstpaneler som toner inn mens man klatrer -->
+      <div class="story-panels">
+        <div class="story-panel" data-panel="0">
+          <p class="story-kicker">Aaserud Trapp</p>
+          <h1>Ett steg<br>om gangen.</h1>
+          <p class="story-lead">Vi leverer og monterer kvalitetstrapper,<br>tilpasset ditt hjem.</p>
+        </div>
+        <div class="story-panel" data-panel="1">
+          <h2>Norsk håndverk<br>i heltre</h2>
+          <p class="story-lead">Jeg velger trapper fra Stryntrappa og Escalia&nbsp;–<br>og monterer dem selv, hjemme hos deg.</p>
+        </div>
+        <div class="story-panel" data-panel="2">
+          <h2>Montert<br>av fagfolk</h2>
+          <p class="story-lead">Vi måler opp, leverer og monterer,<br>slik at trappen sitter perfekt fra første trinn.</p>
+        </div>
+        <div class="story-panel story-panel--cta" data-panel="3">
+          <h2>Klar for<br>neste steg?</h2>
+          <div class="story-actions">
+            <a class="btn btn--primary" href="#modeller">Se trappemodeller</a>
+            <a class="btn btn--ghost" href="#kontakt">Kontakt oss</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skrollehint og trinn-indikator -->
+      <div class="scroll-hint" id="scrollHint">
+        <span>Bla nedover for å ta turen opp</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0l-6-6m6 6l6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="climb-progress" id="climbProgress" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ======== INTRO ======== -->
+    <section class="intro reveal">
+      <p class="section-kicker">Velkommen</p>
+      <h2>Trappen er hjemmets ryggrad</h2>
+      <p>
+        Jeg hjelper deg hele veien – fra valg av modell til ferdig montert trapp. Jeg leverer
+        trapper fra <strong>Stryntrappa</strong> og <strong>Escalia</strong>, og monterer trappen
+        trygt og presist hjemme hos deg.
+      </p>
+    </section>
+
+    <!-- ======== TRAPPEMODELLER ======== -->
+    <section class="models" id="modeller">
+      <div class="section-head reveal">
+        <p class="section-kicker">Utvalget</p>
+        <h2>Våre trappemodeller</h2>
+        <p>Et utvalg av modellene vi leverer og monterer. Alle kan tilpasses med ulike tresorter, farger og rekkverk.</p>
+      </div>
+
+      <div class="filter reveal" role="group" aria-label="Filtrer trappemodeller">
+        <button class="filter-btn is-active" data-filter="alle">Alle</button>
+        <button class="filter-btn" data-filter="stryntrappa">Stryntrappa</button>
+        <button class="filter-btn" data-filter="escalia">Escalia</button>
+      </div>
+
+      <!-- Gjenbrukbare trappeillustrasjoner -->
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <symbol id="stair-open" viewBox="0 0 400 300">
+            <rect x="0" y="262" width="400" height="6" rx="3" fill="var(--ink,#2b2620)" opacity="0.15"/>
+            <g fill="var(--wood,#c9a06b)">
+              <rect x="40"  y="230" width="74" height="14" rx="4"/>
+              <rect x="100" y="192" width="74" height="14" rx="4"/>
+              <rect x="160" y="154" width="74" height="14" rx="4"/>
+              <rect x="220" y="116" width="74" height="14" rx="4"/>
+              <rect x="280" y="78"  width="74" height="14" rx="4"/>
+            </g>
+            <line x1="58" y1="196" x2="342" y2="46" stroke="var(--wood-dark,#a97e4e)" stroke-width="9" stroke-linecap="round"/>
+            <line x1="70" y1="238" x2="70" y2="196" stroke="var(--wood-dark,#a97e4e)" stroke-width="5"/>
+            <line x1="330" y1="86" x2="330" y2="52" stroke="var(--wood-dark,#a97e4e)" stroke-width="5"/>
+          </symbol>
+          <symbol id="stair-glass" viewBox="0 0 400 300">
+            <rect x="0" y="262" width="400" height="6" rx="3" fill="var(--ink,#2b2620)" opacity="0.15"/>
+            <polygon points="56,236 344,86 344,44 56,194" fill="var(--ink,#2b2620)" opacity="0.08"/>
+            <polygon points="56,236 344,86 344,44 56,194" fill="none" stroke="var(--ink,#2b2620)" stroke-width="2" opacity="0.25"/>
+            <g fill="var(--wood,#c9a06b)">
+              <rect x="40"  y="230" width="74" height="14" rx="4"/>
+              <rect x="100" y="192" width="74" height="14" rx="4"/>
+              <rect x="160" y="154" width="74" height="14" rx="4"/>
+              <rect x="220" y="116" width="74" height="14" rx="4"/>
+              <rect x="280" y="78"  width="74" height="14" rx="4"/>
+            </g>
+            <line x1="56" y1="194" x2="344" y2="44" stroke="var(--wood-dark,#a97e4e)" stroke-width="8" stroke-linecap="round"/>
+          </symbol>
+          <symbol id="stair-spindle" viewBox="0 0 400 300">
+            <rect x="0" y="262" width="400" height="6" rx="3" fill="var(--ink,#2b2620)" opacity="0.15"/>
+            <g stroke="var(--ink,#2b2620)" stroke-width="3" opacity="0.5">
+              <line x1="90"  y1="228" x2="90"  y2="180"/>
+              <line x1="150" y1="190" x2="150" y2="142"/>
+              <line x1="210" y1="152" x2="210" y2="104"/>
+              <line x1="270" y1="114" x2="270" y2="66"/>
+              <line x1="330" y1="76"  x2="330" y2="28"/>
+            </g>
+            <g fill="var(--wood,#c9a06b)">
+              <rect x="40"  y="230" width="74" height="14" rx="4"/>
+              <rect x="100" y="192" width="74" height="14" rx="4"/>
+              <rect x="160" y="154" width="74" height="14" rx="4"/>
+              <rect x="220" y="116" width="74" height="14" rx="4"/>
+              <rect x="280" y="78"  width="74" height="14" rx="4"/>
+            </g>
+            <line x1="70" y1="186" x2="350" y2="36" stroke="var(--wood-dark,#a97e4e)" stroke-width="8" stroke-linecap="round"/>
+          </symbol>
+          <symbol id="stair-closed" viewBox="0 0 400 300">
+            <rect x="0" y="262" width="400" height="6" rx="3" fill="var(--ink,#2b2620)" opacity="0.15"/>
+            <path d="M40 262 h74 v-38 h60 v-38 h60 v-38 h60 v-38 h60 v-38 h20 v190 Z" fill="var(--wood,#c9a06b)"/>
+            <path d="M40 262 h74 v-38 h60 v-38 h60 v-38 h60 v-38 h60 v-38" fill="none" stroke="var(--wood-dark,#a97e4e)" stroke-width="5" stroke-linejoin="round"/>
+            <line x1="70" y1="196" x2="350" y2="46" stroke="var(--wood-dark,#a97e4e)" stroke-width="8" stroke-linecap="round"/>
+          </symbol>
+        </defs>
+      </svg>
+
+      <div class="model-grid" id="modelGrid">
+        <!-- Stryntrappa -->
+        <article class="model-card reveal" data-supplier="stryntrappa">
+          <div class="model-card__img tint-3">
+            <img src="bilder/stryntrappa-berg.webp" style="object-position:0% 50%" alt="Trappemodellen Berg fra Stryntrappa" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-spindle"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--stryntrappa">Stryntrappa</span>
+            <h3>Berg</h3>
+            <p>Moderne, skandinavisk trapp med rene detaljer i tre og stål.</p>
+            <a href="#kontakt" data-model="Berg (Stryntrappa)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+        <article class="model-card reveal" data-supplier="stryntrappa">
+          <div class="model-card__img tint-1">
+            <img src="bilder/stryntrappa-foss.webp" style="object-position:85% 50%" alt="Trappemodellen Foss fra Stryntrappa" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-glass"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--stryntrappa">Stryntrappa</span>
+            <h3>Foss</h3>
+            <p>Skandinavisk design med glassrekkverk – lett og elegant.</p>
+            <a href="#kontakt" data-model="Foss (Stryntrappa)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+        <article class="model-card reveal" data-supplier="stryntrappa">
+          <div class="model-card__img tint-4">
+            <img src="bilder/stryntrappa-fjord.webp" style="object-position:25% 50%" alt="Trappemodellen Fjord fra Stryntrappa" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-open"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--stryntrappa">Stryntrappa</span>
+            <h3>Fjord</h3>
+            <p>Vakker trapp med rene linjer som passer i de fleste hjem.</p>
+            <a href="#kontakt" data-model="Fjord (Stryntrappa)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+        <article class="model-card reveal" data-supplier="stryntrappa">
+          <div class="model-card__img tint-2">
+            <img src="bilder/stryntrappa-fauna.webp" style="object-position:5% 50%" alt="Trappemodellen Fauna fra Stryntrappa" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-closed"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--stryntrappa">Stryntrappa</span>
+            <h3>Fauna</h3>
+            <p>Funksjonell og tidløs trapp – et trygt valg for hele familien.</p>
+            <a href="#kontakt" data-model="Fauna (Stryntrappa)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+
+        <!-- Escalia -->
+        <article class="model-card reveal" data-supplier="escalia">
+          <div class="model-card__img tint-1">
+            <img src="bilder/escalia-tokyo.webp" style="object-position:0% 50%" alt="Trappemodellen Tokyo fra Escalia" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-open"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--escalia">Escalia</span>
+            <h3>Tokyo</h3>
+            <p>Tidløs skandinavisk minimalisme – en av Escalias mest populære modeller.</p>
+            <a href="#kontakt" data-model="Tokyo (Escalia)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+        <article class="model-card reveal" data-supplier="escalia">
+          <div class="model-card__img tint-2">
+            <img src="bilder/escalia-bilbao.webp" style="object-position:0% 50%" alt="Trappemodellen Bilbao fra Escalia" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-spindle"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--escalia">Escalia</span>
+            <h3>Bilbao</h3>
+            <p>Stram og enkel trapp der håndløperen danner det bærende elementet.</p>
+            <a href="#kontakt" data-model="Bilbao (Escalia)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+        <article class="model-card reveal" data-supplier="escalia">
+          <div class="model-card__img tint-3">
+            <img src="bilder/escalia-sydney.webp" style="object-position:25% 50%" alt="Trappemodellen Sydney fra Escalia" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-glass"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--escalia">Escalia</span>
+            <h3>Sydney</h3>
+            <p>Åpen og luftig trapp som slipper lyset gjennom rommet.</p>
+            <a href="#kontakt" data-model="Sydney (Escalia)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+        <article class="model-card reveal" data-supplier="escalia">
+          <div class="model-card__img tint-4">
+            <img src="bilder/escalia-osaka.webp" alt="Trappemodellen Osaka fra Escalia" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-open"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--escalia">Escalia</span>
+            <h3>Osaka</h3>
+            <p>Minimalistisk designtrapp med rene linjer og lette detaljer.</p>
+            <a href="#kontakt" data-model="Osaka (Escalia)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+        <article class="model-card reveal" data-supplier="escalia">
+          <div class="model-card__img tint-2">
+            <img src="bilder/escalia-amsterdam.webp" style="object-position:100% 50%" alt="Trappemodellen Amsterdam fra Escalia" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-closed"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--escalia">Escalia</span>
+            <h3>Amsterdam</h3>
+            <p>Plassbesparende spindeltrapp med et lett og luftig uttrykk.</p>
+            <a href="#kontakt" data-model="Amsterdam (Escalia)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+        <article class="model-card reveal" data-supplier="escalia">
+          <div class="model-card__img tint-1">
+            <img src="bilder/escalia-montreux.webp" style="object-position:100% 50%" alt="Trappemodellen Montreux fra Escalia" loading="lazy" onerror="this.classList.add('img-missing')">
+            <svg viewBox="0 0 400 300"><use href="#stair-spindle"/></svg>
+          </div>
+          <div class="model-card__body">
+            <span class="badge badge--escalia">Escalia</span>
+            <h3>Montreux</h3>
+            <p>Tradisjonsrik modell med gjennomført håndverk og varme detaljer.</p>
+            <a href="#kontakt" data-model="Montreux (Escalia)">Få pristilbud&nbsp;→</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="models-note reveal">
+        Begge leverandørene tilbyr flere modeller, tresorter og tilvalg enn det du ser her.
+        <a href="#kontakt">Ta kontakt</a>, så hjelper vi deg å finne trappen som passer ditt hjem.
+      </p>
+    </section>
+
+    <!-- ======== PROSESS ======== -->
+    <section class="process" id="prosess">
+      <div class="section-head reveal">
+        <p class="section-kicker">Fra idé til ferdig trapp</p>
+        <h2>Slik foregår det</h2>
+      </div>
+      <ol class="process-steps">
+        <li class="reveal">
+          <span class="step-num">1</span>
+          <h3>Ta kontakt</h3>
+          <p>Fortell meg om prosjektet ditt – nybygg, renovering eller bytte av eksisterende trapp.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-num">2</span>
+          <h3>Oppmåling</h3>
+          <p>Jeg måler nøyaktig hjemme hos deg og hjelper deg å velge modell, tresort og rekkverk.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-num">3</span>
+          <h3>Bestilling</h3>
+          <p>Jeg bestiller trappen skreddersydd etter dine mål.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-num">4</span>
+          <h3>Montering</h3>
+          <p>Jeg monterer trappen presist og rydder etter meg – klart til bruk samme dag.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ======== OM OSS ======== -->
+    <section class="about" id="om">
+      <div class="about__inner reveal">
+        <p class="section-kicker">Om oss</p>
+        <h2>Aaserud Trapp</h2>
+        <div class="about__grid">
+          <!-- Legg et portrettbilde av Kai i bilder/kai-aaserud.jpg (stående format,
+               ansiktet tydelig synlig), så erstatter det ikonet automatisk. -->
+          <div class="about__portrait">
+            <img src="bilder/kai-aaserud.jpg" alt="Kai Aaserud, eier av Aaserud Trapp" loading="lazy" onerror="this.parentElement.classList.add('is-empty')">
+            <span class="about__portrait-fallback" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M16 16a6 6 0 100-12 6 6 0 000 12zM6 28c0-6 4.5-10 10-10s10 4 10 10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </span>
+          </div>
+          <div class="about__text">
+            <p>
+              Jeg heter Kai Aaserud, og Aaserud Trapp er mitt familiedrevne firma med røtter på
+              Hadeland. Jeg leverer trapper på hele Østlandet.
+            </p>
+            <p>
+              Jeg er forhandler og montør for Stryntrappa og Escalia, og velger alltid
+              kvalitetstrapper i heltre som er bygget for å vare i generasjoner.
+            </p>
+            <p>
+              Uansett om du bygger nytt eller skal bytte ut en gammel trapp, følger jeg deg hele
+              veien: rådgivning, oppmåling, levering og montering.
+            </p>
+            <p class="about__signature">Kai Aaserud <span>– eier, Aaserud Trapp</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== KONTAKT ======== -->
+    <section class="contact" id="kontakt">
+      <div class="contact__info reveal">
+        <p class="section-kicker">Kontakt</p>
+        <h2>Fortell oss om prosjektet ditt</h2>
+        <p>Send oss en melding, så tar vi kontakt for en uforpliktende prat.</p>
+        <ul class="contact-list">
+          <li>
+            <strong>E-post</strong>
+            <a href="mailto:post@aaserud.design">post@aaserud.design</a>
+          </li>
+          <li>
+            <strong>Telefon</strong>
+            <a href="tel:+4798285604">+47 982 85 604</a>
+          </li>
+          <li>
+            <strong>Adresse</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Stubbengkroken+73%2C+Norge" target="_blank" rel="noopener">Stubbengkroken 73</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- FormSubmit: første innsending utløser en aktiveringsmail til adressen under -->
+      <form class="contact-form reveal" action="https://formsubmit.co/post@aaserud.design" method="POST">
+        <input type="hidden" name="_subject" value="Ny henvendelse fra aaserudtrapp.no">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://aaserudtrapp.no/takk.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <label for="f-navn">Navn</label>
+          <input id="f-navn" type="text" name="navn" required autocomplete="name">
+        </div>
+        <div class="form-row form-row--split">
+          <div>
+            <label for="f-epost">E-post</label>
+            <input id="f-epost" type="email" name="epost" required autocomplete="email">
+          </div>
+          <div>
+            <label for="f-tlf">Telefon</label>
+            <input id="f-tlf" type="tel" name="telefon" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="f-emne">Hva gjelder det?</label>
+          <select id="f-emne" name="emne">
+            <option>Ny trapp</option>
+            <option>Bytte av eksisterende trapp</option>
+            <option>Rekkverk / tilbehør</option>
+            <option>Annet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="f-melding">Melding</label>
+          <textarea id="f-melding" name="melding" rows="5" required placeholder="Fortell oss litt om prosjektet ..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Send melding</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="site-footer">
+    <div class="footer__brand">
+      <svg viewBox="0 0 32 32" class="logo__icon" aria-hidden="true">
+        <path d="M3 27h9v-7h7v-7h7V6h3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Aaserud Trapp</span>
+    </div>
+    <p>Forhandler av Stryntrappa og Escalia.</p>
+    <p class="footer__copy">© 2026 Aaserud Trapp. Alle rettigheter reservert.</p>
+    <p class="footer__credit">Nettside laget av <a href="https://aaserudweb.no" target="_blank" rel="noopener">AaserudWeb</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
